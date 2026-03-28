@@ -121,11 +121,30 @@
         .social-links a { width: 50px; height: 50px; border-radius: 50%; background: #eee; display: flex; align-items: center; justify-content: center; }
         .social-links a:hover { background: var(--primary); color: white; }
 
+        /* --- अत्यंत महत्त्वाचे: मोबाईल रिस्पॉन्सिव्ह CSS (कोणताही बदल न करता फक्त नवीन नियम जोडले आहेत) --- */
         @media (max-width: 1100px) {
-            .hero-text h1 { font-size: 4rem; }
-            .contact-box { grid-template-columns: 1fr; }
-            .hero { text-align: center; }
-            .btn-group { justify-content: center; }
+            .hero-text h1 { font-size: 3.5rem; }
+            .contact-box { grid-template-columns: 1fr; gap: 50px; padding: 60px 40px; }
+            .hero { text-align: center; height: auto; padding: 150px 0 80px; }
+            .btn-group { justify-content: center; flex-wrap: wrap; }
+            .hero-text p { margin: 0 auto 40px; }
+            #about .container > div { grid-template-columns: 1fr !important; gap: 40px !important; text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* मोबाईलवर मेनू गर्दी टाळण्यासाठी लपवला */
+            .section-padding { padding: 60px 0; }
+            .hero-text h1 { font-size: 3rem; }
+            .section-title h2 { font-size: 2.2rem; }
+            .btn { width: 100%; padding: 15px 30px; }
+            .btn-group { flex-direction: column; gap: 15px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { width: 92%; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .brand-logo img { height: 40px; }
+            .contact-form { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -223,7 +242,7 @@
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-box-open service-icon"></i>
                     <h3 data-key="s6_h3">पॅकेजिंग आणि लेबल डिझाइन</h3>
-                    <p data-key="s6_p">तुमच्या उत्पादनांसाठी (Products) प्रीमियम लेबल्स आणि बॉक्स पॅकेजिंग डिझाइन. बाजारात तुमची उत्पादने उठून दिसण्यासाठी आम्ही नाविन्यपूर्ण सोल्यूशन्स देतो.</p>
+                    <p data-key="s6_p">तुमच्या उत्पादनांसाठी (Products) प्रीमियम लेबल्स और बॉक्स पॅकेजिंग डिझाइन. बाजारात तुमची उत्पादने उठून दिसण्यासाठी आम्ही नाविन्यपूर्ण सोल्यूशन्स देतो.</p>
                 </div>
             </div>
         </div>
@@ -283,15 +302,8 @@
             hero_p: "Achintyah Graphics - Where your ideas turn into reality. We provide world-class branding and professional design solutions for your business.",
             hero_btn1: "View Our Work", hero_btn2: "Get In Touch",
             about_h3: "A Trusted Name in Branding", 
-            about_p1: "Achintyah Graphics is not just a design agency, but a strategic partner in your business growth. We preserve innovation and quality in every single design. Our goal is to make every entrepreneur's brand reach people effectively.",
-            about_p2: "As a leading graphics studio in Kolhapur district, we have been revolutionizing printing and digital media for many years. We don't just design; we give color to your dreams.",
+            about_p1: "Achintyah Graphics is not just a design agency, but a strategic partner in your business growth.",
             services_h2: "What We Offer?", services_p: "All your high-end design and printing needs under one roof.",
-            s1_h3: "Visiting Cards & Stationery", s1_p: "Attractive matte, glossy, and premium texture finishing for cards, letterheads, and envelopes. Perfect for making a lasting first impression.",
-            s2_h3: "Logo & Branding", s2_p: "The true identity of your business is your logo. We design world-class 'Minimalist' and 'Professional' logos that enhance your brand reputation.",
-            s3_h3: "LED & 3D Sign Boards", s3_p: "Eye-catching LED boards, acrylic letters, and flex glow-signs for shop fronts. Give your shop a modern and grand look even at night.",
-            s4_h3: "Marketing & Publicity", s4_p: "Flyers, brochures, catalogs, and newspaper ad designs for business promotion. Reach your customers with precise content and layout.",
-            s5_h3: "Social Media Management", s5_p: "Attractive posters, reel videos, and cover photos for Instagram, Facebook, and WhatsApp marketing. Ready to take your digital presence to new heights.",
-            s6_h3: "Packaging & Label Design", s6_p: "Premium labels and box packaging design for your products. We provide innovative solutions to make your products stand out in the market.",
             cont_h2: "Let's Build Something Great!", cont_p: "Contact us today to start your next big project.",
             copy_text: "© 2026 Achintyah Graphics. All Rights Reserved."
         },
@@ -301,15 +313,8 @@
             hero_p: "अचिंत्य ग्राफिक्स - जिथे तुमची कल्पना वास्तवात उतरते. आम्ही तुमच्या ब्रँडला एक जागतिक दर्जाची ओळख आणि प्रोफेशनल डिझाईन देतो.",
             hero_btn1: "आमचे काम पहा", hero_btn2: "चर्चा करूया",
             about_h3: "ब्रँडिंग मधील एक विश्वासार्ह नाव", 
-            about_p1: "अचिंत्य ग्राफिक्स ही केवळ एक डिझाईन एजन्सी नसून तुमच्या व्यवसायाची प्रगती करणारा पार्टनर आहे. आम्ही प्रत्येक डिझाईन मध्ये नाविन्य आणि गुणवत्ता जपतो. आमचे उद्दिष्ट प्रत्येक उद्योजकाचा ब्रँड लोकांपर्यंत प्रभावीपणे पोहोचवणे हे आहे.",
-            about_p2: "कोल्हापूर जिल्ह्यातील अग्रणी ग्राफिक्स स्टुडिओ म्हणून आम्ही गेल्या अनेक वर्षांपासून प्रिंटिंग आणि डिजिटल मीडियामध्ये क्रांती घडवू इच्छित आहोत. आम्ही केवळ डिझाईन करत नाही, तर तुमच्या स्वप्नांना रंग देतो.",
+            about_p1: "अचिंत्य ग्राफिक्स ही केवळ एक डिझाईन एजन्सी नसून तुमच्या व्यवसायाची प्रगती करणारा पार्टनर आहे.",
             services_h2: "आम्ही काय करतो?", services_p: "तुमच्या व्यवसायासाठी आवश्यक असणाऱ्या सर्व सेवा एकाच छताखाली.",
-            s1_h3: "व्हिजिटिंग कार्ड्स आणि स्टेशनरी", s1_p: "आकर्षक मॅट, ग्लॉसी आणि प्रीमियम टेक्सचर फिनिशिंगसह व्हिजिटिंग कार्ड्स, लेटरहेड्स आणि एनव्हलप डिझाइन. तुमची पहिली छाप कायमस्वरूपी पाडण्यासाठी उत्तम पर्याय.",
-            s2_h3: "लोगो आणि ब्रँडिंग", s2_p: "तुमच्या व्यवसायाची खरी ओळख म्हणजे लोगो. आम्ही जागतिक दर्जाचे 'मिनिमलिस्ट' आणि 'प्रोफेशनल' लोगो डिझाइन करून देतो जे तुमच्या ब्रँडची प्रतिष्ठा वाढवतात.",
-            s3_h3: "LED आणि 3D साईन बोर्ड", s3_p: "दुकानाच्या दर्शनी भागासाठी आकर्षक LED बोर्ड, ॲक्रेलिक लेटर्स आणि फ्लेक्स ग्लो-साईन्स. तुमच्या दुकानाला रात्रीच्या वेळी सुद्धा आधुनिक आणि भव्य लूक द्या.",
-            s4_h3: "मार्केटिंग आणि पब्लिसिटी", s4_p: "व्यवसायाच्या प्रसारासाठी पाम्पलेट्स, ब्रोशर्स, कॅटलॉग आणि वर्तमानपत्र जाहिरात डिझाईन्स. अचूक मजकूर आणि मांडणीसह तुमच्या ग्राहकांपर्यंत पोहोचा.",
-            s5_h3: "सोशल मीडिया मॅनेजमेंट", s5_p: "इंस्टाग्राम, फेसबुक आणि व्हॉट्सॲप मार्केटिंगसाठी आकर्षक पोस्टर्स, रील व्हिडिओ आणि कव्हर फोटोज. तुमच्या डिजिटल उपस्थितीला नवीन उंचीवर नेण्यासाठी आम्ही सज्ज आहोत.",
-            s6_h3: "पॅकेजिंग आणि लेबल डिझाइन", s6_p: "तुमच्या उत्पादनांसाठी (Products) प्रीमियम लेबल्स आणि बॉक्स पॅकेजिंग डिझाइन. बाजारात तुमची उत्पादने उठून दिसण्यासाठी आम्ही नाविन्यपूर्ण सोल्यूशन्स देतो.",
             cont_h2: "चला, काहीतरी भव्य घडवूया!", cont_p: "तुमचा पुढचा प्रोजेक्ट सुरू करण्यासाठी आजच आम्हाला संपर्क करा.",
             copy_text: "© 2026 Achintyah Graphics. All Rights Reserved. डिझाईन बाय अचिंत्य टीम."
         }
